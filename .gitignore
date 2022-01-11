@@ -2,6 +2,9 @@
 # Created by https://www.toptal.com/developers/gitignore/api/node,soliditytruffle,visualstudiocode
 # Edit at https://www.toptal.com/developers/gitignore?templates=node,soliditytruffle,visualstudiocode
 
+### Project related ###
+types
+
 ### Node ###
 # Logs
 logs
