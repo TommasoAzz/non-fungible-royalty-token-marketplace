@@ -28,19 +28,13 @@ interface IERC1190Marketplace {
         uint256 tokenId
     ) external;
 
-    function approveOwnershipLicenseTransfer(
+    function getOwnershipLicenseTransferRequests(
         address collectionAddress,
         uint256 tokenId
-    ) external;
+    ) external view returns (address[] memory requests);
 
-    function approveCreativeLicenseTransfer(
+    function getCreativeLicenseTransferRequests(
         address collectionAddress,
         uint256 tokenId
-    ) external;
-
-    function getOwnershipLicenseTransferRequests(address collectionAddress, uint256 tokenId)
-        external view returns(address[] memory requests);
-
-    function getCreativeLicenseTransferRequests(address collectionAddress, uint256 tokenId)
-        external view returns(address[] memory requests);
+    ) external view returns (address[] memory requests);
 }

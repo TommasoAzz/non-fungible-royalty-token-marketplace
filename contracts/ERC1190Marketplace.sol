@@ -11,13 +11,14 @@ contract ERC1190Marketplace is Context, IERC1190Marketplace {
     mapping(address => address) private _collectionCreators;
 
     address[] private _creators;
-    
+
     address[] private _collections;
 
-    mapping(address => mapping(uint256 => address[])) private _ownershipLicenseApprovalRequests;
+    mapping(address => mapping(uint256 => address[]))
+        private _ownershipLicenseApprovalRequests;
 
-    mapping(address => mapping(uint256 => address[])) private _creativeLicenseApprovalRequests;
-
+    mapping(address => mapping(uint256 => address[]))
+        private _creativeLicenseApprovalRequests;
 
     function getCollections()
         external
@@ -68,30 +69,50 @@ contract ERC1190Marketplace is Context, IERC1190Marketplace {
     function requireOwnershipLicenseTransferApproval(
         address collectionAddress,
         uint256 tokenId
-    ) external override {}
+    ) external override {
+        require(
+            collectionAddress != address(0),
+            "ERC1190Marketplace: collectionAddress cannot be the zero address."
+        );
+
+        _ownershipLicenseApprovalRequests[collectionAddress][tokenId].push(
+            _msgSender()
+        );
+    }
 
     function requireCreativeLicenseTransferApproval(
         address collectionAddress,
         uint256 tokenId
-    ) external override {}
+    ) external override {
+        require(
+            collectionAddress != address(0),
+            "ERC1190Marketplace: collectionAddress cannot be the zero address."
+        );
 
-    function approveOwnershipLicenseTransfer(
-        address collectionAddress,
-        uint256 tokenId
-    ) external override {}
-
-    function approveCreativeLicenseTransfer(
-        address collectionAddress,
-        uint256 tokenId
-    ) external override {}
+        _creativeLicenseApprovalRequests[collectionAddress][tokenId].push(
+            _msgSender()
+        );
+    }
 
     function getOwnershipLicenseTransferRequests(
         address collectionAddress,
         uint256 tokenId
-    ) external view override returns (address[] memory) {}
+    ) external view override returns (address[] memory) {
+        require(
+            collectionAddress != address(0),
+            "ERC1190Marketplace: collectionAddress cannot be the zero address."
+        );
+        return _ownershipLicenseApprovalRequests[collectionAddress][tokenId];
+    }
 
     function getCreativeLicenseTransferRequests(
         address collectionAddress,
         uint256 tokenId
-    ) external view override returns (address[] memory) {}
+    ) external view override returns (address[] memory) {
+        require(
+            collectionAddress != address(0),
+            "ERC1190Marketplace: collectionAddress cannot be the zero address."
+        );
+        return _creativeLicenseApprovalRequests[collectionAddress][tokenId];
+    }
 }
