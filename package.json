@@ -1,0 +1,27 @@
+{
+  "name": "non-fungible-royalty-token-marketplace",
+  "version": "1.0.0",
+  "description": "Smart contracts for managing a ERC1190-compliant tokens",
+  "main": "truffle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TommasoAzz/non-fungible-royalty-token-marketplace.git"
+  },
+  "keywords": [
+    "erc1190",
+    "solidity",
+    "ethereum",
+    "tokens",
+    "non",
+    "fungible"
+  ],
+  "author": "Tommaso Azzalin, Domingo Ranieri",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TommasoAzz/non-fungible-royalty-token-marketplace/issues"
+  },
+  "homepage": "https://github.com/TommasoAzz/non-fungible-royalty-token-marketplace#readme"
+}
