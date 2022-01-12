@@ -35,18 +35,6 @@
 
 
 
-### `approveOwnershipLicenseTransfer(address collectionAddress, uint256 tokenId)` (external)
-
-
-
-
-
-### `approveCreativeLicenseTransfer(address collectionAddress, uint256 tokenId)` (external)
-
-
-
-
-
 ### `getOwnershipLicenseTransferRequests(address collectionAddress, uint256 tokenId) → address[] requests` (external)
 
 
