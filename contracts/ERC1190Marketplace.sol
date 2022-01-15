@@ -63,6 +63,8 @@ contract ERC1190Marketplace is Context, IERC1190Marketplace {
         _creators.push(creator);
         _collections.push(newCollectionAddress);
 
+        emit CollectionDeployed(name, symbol, baseURI, newCollectionAddress);
+
         return newCollectionAddress;
     }
 

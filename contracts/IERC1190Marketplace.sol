@@ -2,6 +2,13 @@
 pragma solidity >=0.4.22 <0.9.0;
 
 interface IERC1190Marketplace {
+    event CollectionDeployed(
+        string name,
+        string symbol,
+        string baseURI,
+        address contractAddress
+    );
+    
     function getCollections()
         external
         view
