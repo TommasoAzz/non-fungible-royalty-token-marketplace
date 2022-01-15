@@ -48,5 +48,11 @@
 
 
 
+### `CollectionDeployed(string name, string symbol, string baseURI, address contractAddress)`
+
+
+
+
+
 
 
