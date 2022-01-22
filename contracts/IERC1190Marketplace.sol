@@ -8,7 +8,11 @@ interface IERC1190Marketplace {
         string baseURI,
         address contractAddress
     );
-    
+
+    function creatorOf(address collectionAddress)
+        external
+        returns (address creator);
+
     function getCollections()
         external
         view

@@ -5,6 +5,12 @@
 
 
 
+### `creatorOf(address collectionAddress) → address creator` (external)
+
+
+
+
+
 ### `getCollections() → address[] contractAddresses` (external)
 
 

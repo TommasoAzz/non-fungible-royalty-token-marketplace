@@ -20,6 +20,20 @@ contract ERC1190Marketplace is Context, IERC1190Marketplace {
     mapping(address => mapping(uint256 => address[]))
         private _creativeLicenseApprovalRequests;
 
+    function creatorOf(address collectionAddress)
+        external
+        view
+        override
+        returns (address)
+    {
+        require(
+            collectionAddress != address(0),
+            "ERC1190Marketplace: collectionAddress cannot be the zero address."
+        );
+
+        return _collectionCreators[collectionAddress];
+    }
+
     function getCollections()
         external
         view
