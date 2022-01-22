@@ -7,20 +7,22 @@
     "test": "test"
   },
   "dependencies": {
-    "@openzeppelin/contracts": "^4.4.1"
+    "@openzeppelin/contracts": "^4.4.1",
+    "t": "^0.5.1",
+    "truffle-hdwallet-provider": "^1.0.17"
   },
   "devDependencies": {
-    "truffle": "^5.4.26",
-    "ts-node": "^10.4.0",
-    "typechain": "^6.1.0",
-    "typescript": "^4.5.4",
-    "solidity-docgen": "^0.5.16",
-    "solc-0.8.11": "npm:solc@^0.8.11",
-    "non-fungible-royalty-token": "TommasoAzz/non-fungible-royalty-token-contracts",
     "@typechain/truffle-v5": "^6.0.0",
     "@types/chai": "^4.3.0",
     "@types/mocha": "^9.0.0",
-    "@types/node": "^17.0.8"
+    "@types/node": "^17.0.8",
+    "non-fungible-royalty-token": "TommasoAzz/non-fungible-royalty-token-contracts",
+    "solc-0.8.11": "npm:solc@^0.8.11",
+    "solidity-docgen": "^0.5.16",
+    "truffle": "^5.4.26",
+    "ts-node": "^10.4.0",
+    "typechain": "^6.1.0",
+    "typescript": "^4.5.4"
   },
   "scripts": {
     "generate-types": "npx typechain --target=truffle-v5 'build/contracts/*.json'",
