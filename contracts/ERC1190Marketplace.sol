@@ -34,7 +34,7 @@ contract ERC1190Marketplace is Context, IERC1190Marketplace {
         return _collectionCreators[collectionAddress];
     }
 
-    function getCollections()
+    function allCollections()
         external
         view
         override
@@ -43,7 +43,7 @@ contract ERC1190Marketplace is Context, IERC1190Marketplace {
         return _collections;
     }
 
-    function getCollections(address collectionOwner)
+    function collectionsOf(address collectionOwner)
         external
         view
         override

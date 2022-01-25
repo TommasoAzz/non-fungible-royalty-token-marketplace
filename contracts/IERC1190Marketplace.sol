@@ -13,12 +13,12 @@ interface IERC1190Marketplace {
         external
         returns (address creator);
 
-    function getCollections()
+    function allCollections()
         external
         view
         returns (address[] memory contractAddresses);
 
-    function getCollections(address collectionOwner)
+    function collectionsOf(address collectionOwner)
         external
         view
         returns (address[] memory contractAddresses);

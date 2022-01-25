@@ -11,13 +11,13 @@
 
 
 
-### `getCollections() → address[] contractAddresses` (external)
+### `allCollections() → address[] contractAddresses` (external)
 
 
 
 
 
-### `getCollections(address collectionOwner) → address[] contractAddresses` (external)
+### `collectionsOf(address collectionOwner) → address[] contractAddresses` (external)
 
 
 
