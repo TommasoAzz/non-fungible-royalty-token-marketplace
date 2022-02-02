@@ -94,6 +94,8 @@ contract ERC1190Marketplace is Context, IERC1190Marketplace {
         _ownershipLicenseApprovalRequests[collectionAddress][tokenId].push(
             _msgSender()
         );
+
+        emit LicenseRequestSent(collectionAddress, tokenId);
     }
 
     function requireCreativeLicenseTransferApproval(
@@ -108,6 +110,8 @@ contract ERC1190Marketplace is Context, IERC1190Marketplace {
         _creativeLicenseApprovalRequests[collectionAddress][tokenId].push(
             _msgSender()
         );
+
+        emit LicenseRequestSent(collectionAddress, tokenId);
     }
 
     function getOwnershipLicenseTransferRequests(
