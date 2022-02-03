@@ -11,7 +11,7 @@ interface IERC1190Marketplace {
 
     event LicenseRequestSent(
         address account,
-        string tokenId
+        uint256 tokenId
     );
 
     function creatorOf(address collectionAddress)

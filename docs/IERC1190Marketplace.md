@@ -60,5 +60,11 @@
 
 
 
+### `LicenseRequestSent(address account, uint256 tokenId)`
+
+
+
+
+
 
 
