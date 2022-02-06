@@ -41,6 +41,18 @@
 
 
 
+### `removeOwnershipLicenseTransferApproval(address collectionAddress, uint256 tokenId, address toRemove)` (external)
+
+
+
+
+
+### `removeCreativeLicenseTransferApproval(address collectionAddress, uint256 tokenId, address toRemove)` (external)
+
+
+
+
+
 ### `getOwnershipLicenseTransferRequests(address collectionAddress, uint256 tokenId) → address[]` (external)
 
 
