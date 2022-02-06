@@ -57,6 +57,9 @@ contract ERC1190Marketplace is Context, IERC1190Marketplace {
         return _collectionsOwned[collectionOwner];
     }
 
+    /**
+     * @dev See {IERC1190Marketplace-deployNewCollection}.
+     */
     function deployNewCollection(
         string calldata name,
         string calldata symbol,
@@ -82,6 +85,9 @@ contract ERC1190Marketplace is Context, IERC1190Marketplace {
         return newCollectionAddress;
     }
 
+    /**
+     * @dev See {IERC1190Marketplace-requireOwnershipLicenseTransferApproval}.
+     */
     function requireOwnershipLicenseTransferApproval(
         address collectionAddress,
         uint256 tokenId
@@ -98,6 +104,9 @@ contract ERC1190Marketplace is Context, IERC1190Marketplace {
         emit LicenseRequestSent(collectionAddress, tokenId);
     }
 
+    /**
+     * @dev See {IERC1190Marketplace-requireCreativeLicenseTransferApproval}.
+     */
     function requireCreativeLicenseTransferApproval(
         address collectionAddress,
         uint256 tokenId
@@ -114,6 +123,9 @@ contract ERC1190Marketplace is Context, IERC1190Marketplace {
         emit LicenseRequestSent(collectionAddress, tokenId);
     }
 
+    /**
+     * @dev See {IERC1190Marketplace-removeOwnershipLicenseTransferApproval}.
+     */
     function removeOwnershipLicenseTransferApproval(
         address collectionAddress,
         uint256 tokenId,
@@ -147,6 +159,9 @@ contract ERC1190Marketplace is Context, IERC1190Marketplace {
         }
     }
 
+    /**
+     * @dev See {IERC1190Marketplace-removeCreativeLicenseTransferApproval}.
+     */
     function removeCreativeLicenseTransferApproval(
         address collectionAddress,
         uint256 tokenId,
@@ -179,6 +194,9 @@ contract ERC1190Marketplace is Context, IERC1190Marketplace {
         }
     }
 
+    /**
+     * @dev See {IERC1190Marketplace-getOwnershipLicenseTransferRequests}.
+     */
     function getOwnershipLicenseTransferRequests(
         address collectionAddress,
         uint256 tokenId
@@ -190,6 +208,9 @@ contract ERC1190Marketplace is Context, IERC1190Marketplace {
         return _ownershipLicenseApprovalRequests[collectionAddress][tokenId];
     }
 
+    /**
+     * @dev See {IERC1190Marketplace-getCreativeLicenseTransferRequests}.
+     */
     function getCreativeLicenseTransferRequests(
         address collectionAddress,
         uint256 tokenId
