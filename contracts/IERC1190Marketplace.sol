@@ -44,6 +44,18 @@ interface IERC1190Marketplace {
         uint256 tokenId
     ) external;
 
+    function removeOwnershipLicenseTransferApproval(
+        address collectionAddress,
+        uint256 tokenId,
+        address toRemove
+    ) external;
+
+    function removeCreativeLicenseTransferApproval(
+        address collectionAddress,
+        uint256 tokenId,
+        address toRemove
+    ) external;
+
     function getOwnershipLicenseTransferRequests(
         address collectionAddress,
         uint256 tokenId
