@@ -9,10 +9,7 @@ interface IERC1190Marketplace {
         address contractAddress
     );
 
-    event LicenseRequestSent(
-        address account,
-        uint256 tokenId
-    );
+    event LicenseRequestSent(address account, uint256 tokenId);
 
     function creatorOf(address collectionAddress)
         external

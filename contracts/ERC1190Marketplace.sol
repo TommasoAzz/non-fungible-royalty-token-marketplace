@@ -124,16 +124,25 @@ contract ERC1190Marketplace is Context, IERC1190Marketplace {
             "ERC1190Marketplace: collectionAddress cannot be the zero address."
         );
 
-        address[] memory requests = _ownershipLicenseApprovalRequests[collectionAddress][tokenId];
+        address[] memory requests = _ownershipLicenseApprovalRequests[
+            collectionAddress
+        ][tokenId];
         bool stop = false;
 
-        for(uint256 i = 0; i < requests.length; i++) {
-            if(requests[i] == toRemove) {
-               _ownershipLicenseApprovalRequests[collectionAddress][tokenId][i] = _ownershipLicenseApprovalRequests[collectionAddress][tokenId][
-                   _ownershipLicenseApprovalRequests[collectionAddress][tokenId].length - 1
-               ];
-               _ownershipLicenseApprovalRequests[collectionAddress][tokenId].pop();
-               stop = true;
+        for (uint256 i = 0; i < requests.length; i++) {
+            if (requests[i] == toRemove) {
+                _ownershipLicenseApprovalRequests[collectionAddress][tokenId][
+                    i
+                ] = _ownershipLicenseApprovalRequests[collectionAddress][
+                    tokenId
+                ][
+                    _ownershipLicenseApprovalRequests[collectionAddress][
+                        tokenId
+                    ].length - 1
+                ];
+                _ownershipLicenseApprovalRequests[collectionAddress][tokenId]
+                    .pop();
+                stop = true;
             }
         }
     }
@@ -148,16 +157,24 @@ contract ERC1190Marketplace is Context, IERC1190Marketplace {
             "ERC1190Marketplace: collectionAddress cannot be the zero address."
         );
 
-        address[] memory requests = _creativeLicenseApprovalRequests[collectionAddress][tokenId];
+        address[] memory requests = _creativeLicenseApprovalRequests[
+            collectionAddress
+        ][tokenId];
         bool stop = false;
 
-        for(uint256 i = 0; i < requests.length; i++) {
-            if(requests[i] == toRemove) {
-               _creativeLicenseApprovalRequests[collectionAddress][tokenId][i] = _creativeLicenseApprovalRequests[collectionAddress][tokenId][
-                   _creativeLicenseApprovalRequests[collectionAddress][tokenId].length - 1
-               ];
-               _creativeLicenseApprovalRequests[collectionAddress][tokenId].pop();
-               stop = true;
+        for (uint256 i = 0; i < requests.length; i++) {
+            if (requests[i] == toRemove) {
+                _creativeLicenseApprovalRequests[collectionAddress][tokenId][
+                    i
+                ] = _creativeLicenseApprovalRequests[collectionAddress][
+                    tokenId
+                ][
+                    _creativeLicenseApprovalRequests[collectionAddress][tokenId]
+                        .length - 1
+                ];
+                _creativeLicenseApprovalRequests[collectionAddress][tokenId]
+                    .pop();
+                stop = true;
             }
         }
     }
