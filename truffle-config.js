@@ -15,14 +15,14 @@ module.exports = {
       port: 8545,
       network_id: "*",
     },
-    rinkeby: {
+    ethnetwork: {
       provider: function() {
         return new HDWalletProvider(
           process.env.MNEMONIC, 
           process.env.URL
         );
       },
-      network_id: 4,
+      network_id: process.env.NETWORK_ID,
       gas: 6700000,
       gasPrice: 10000000000,
     }
